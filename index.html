@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shouto portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="nav-logo">shouto portfolio</h1>
+                <button class="hamburger" id="hamburger">&#9776;</button>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#skills">スキル</a></li>
+                    <li><a href="#works">実績</a></li>
+                    <li><a href="#gallery">画像生成</a></li>
+                    <li><a href="#contact">お問い合わせ</a></li>
+                    <li><a href="#about">自己紹介</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <img src="images/hero.png" alt="Hero Image" class="hero-image">
+
+    <main class="container">
+        <!-- スキル -->
+        <section id="skills" class="card" data-aos="fade-up">
+            <h2>🔧 制作スキル・対応可能な業務</h2>
+            <ul>
+                <li>HTML / CSS / JavaScript（基本）</li>
+                <li>レスポンシブ対応（スマホ対応OK）</li>
+                <li>画像生成AI（バナーやアイキャッチにも対応）</li>
+                <li>Webサイトの軽量・シンプルな構築</li>
+                <li>GitHub Pagesによる公開・運用</li>
+            </ul>
+        </section>
+
+        <!-- 実績 -->
+        <section id="works" class="card" data-aos="fade-up">
+            <h2>🌱 制作実績／ポートフォリオ例</h2>
+            <p>
+                <a href="#">・ポートフォリオサイト（このページ）</a><br>
+                → レスポンシブ対応／シンプル設計／ココナラ用
+            </p>
+        </section>
+
+        <!-- 画像生成 -->
+        <section id="gallery" class="card" data-aos="fade-up">
+            <h2>🎨 画像生成サンプル</h2>
+            <div class="gallery">
+                <img src="images/sample1.jpg" alt="Sample Image 1">
+                <img src="images/sample2.jpg" alt="Sample Image 2">
+                <img src="images/sample3.jpg" alt="Sample Image 3">
+            </div>
+        </section>
+
+        <!-- お問い合わせ -->
+        <section id="contact" class="card" data-aos="fade-up">
+            <h2>📩 お問い合わせ</h2>
+            <p>ココナラ（出品ページ予定）／その他DMにて</p>
+        </section>
+
+        <!-- 自己紹介 -->
+        <section id="about" class="card" data-aos="fade-up">
+            <h2>🧑‍💻 自己紹介</h2>
+            <ul>
+                <li>名前：shouto</li>
+                <li>出身：千葉県</li>
+                <li>経歴：ECサイト運営 → データ解析 → Web制作</li>
+                <li>趣味：画像制作・WEBサービス作成</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 shouto portfolio
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // メニューリンクを押したら自動で閉じる
+        document.querySelectorAll('#nav-menu li a').forEach(link =>
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            })
+        );
+    </script>
+
+
+</body>
+
+</html>
